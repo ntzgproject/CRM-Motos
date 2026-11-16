@@ -41,13 +41,15 @@ precioFinanciadoInput.addEventListener("change", (e) => {
 const renderContado = (precio) => {
 
     const Casco = 50000;
+    const GastoFIjo = 25000;
     const Arancel = precio * 1.8 / 100;
     const DGR = precio * 1.5 / 100;
-    const precioFinal = precio + Arancel + DGR + Casco;
+    const precioFinal = precio + Arancel + DGR + Casco + GastoFIjo;
 
     ContadoDiv.innerHTML = `
         <h2>Contado</h2>
         <h3>Precio unidad: $${formatoPesos.format(precio)}</h3>
+        <h3>Gasto Fijo: $${formatoPesos.format(GastoFIjo)}</h3>
         <h3>Arancel: $${formatoPesos.format(Arancel)}</h3>
         <h3>DGR: $${formatoPesos.format(DGR)}</h3>
         <h3>Casco: $${formatoPesos.format(Casco)}</h3>
@@ -60,16 +62,19 @@ const renderContado = (precio) => {
 const FinanciadoDiv = document.getElementById("Financiado");
 
 const renderFinanciado = (precio) => {
+
     const Casco = 62500;
+    const GastoFijo = 31250;
     const Arancel = (precio * 1.8 / 100) * 25 / 100 + (precio * 1.8 / 100);
-    const DGR = Math.round((precio + Arancel + Casco) * 0.015);
+    const DGR = Math.round((precio + Arancel + Casco + GastoFijo) * 0.015);
     const DGR2 = DGR * 0.25;
     const DGRFinal = DGR + DGR2;
-    const precioFinal = Math.round(precio + Arancel + Casco + DGRFinal);
+    const precioFinal = Math.round(precio + Arancel + Casco + DGRFinal + GastoFijo);
 
     FinanciadoDiv.innerHTML = `
         <h2>Financiado</h2>
         <h3>Precio unidad: $${formatoPesos.format(precio)}</h3>
+        <h3>Gasto Fijo: $${formatoPesos.format(GastoFijo)}</h3>
         <h3>Arancel: $${formatoPesos.format(Arancel)}</h3>
         <h3>DGR: $${formatoPesos.format(DGR)}</h3>
         <h3>DGR2: $${formatoPesos.format(DGR2)}</h3>
