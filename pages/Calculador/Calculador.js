@@ -99,6 +99,25 @@ tarjetaInput.addEventListener("change", (e) => {
     }
 });
 
+                // Calculadora Suma
+
+const inputSuma1 = document.getElementById("tarjeta-op-1");
+const inputSuma2 = document.getElementById("tarjeta-op-2");
+const tarjetaOpResultado = document.getElementById("tarjeta-op-resultado");
+
+const actualizarSuma = () => {
+    const num1 = Number(inputSuma1.value) || 0;
+    const num2 = Number(inputSuma2.value) || 0;
+    const resultado = num1 + num2;
+
+    tarjetaOpResultado.textContent = `Resultado: $${formatoPesos.format(resultado)}`;
+};
+
+inputSuma1.addEventListener("input", actualizarSuma);
+inputSuma2.addEventListener("input", actualizarSuma);
+
+
+
             // Render Tarjeta Naranja
 
 const naranjaCuotaZ = document.getElementById("n-z-cuota");
@@ -217,6 +236,5 @@ const renderBancarizada = (precio) => {
 
     bancarizadaCuota24.innerHTML = `$${formatoPesos.format(cuota24)}`;
     bancarizadaLimite24.innerHTML = `$${formatoPesos.format(limite24)}`;
-
 
 };
