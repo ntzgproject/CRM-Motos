@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="Calculador.js"></script>
+    <link rel="stylesheet" href="calculador.css">
+    <title>CRM Motos</title>
+</head>
+<body>
+    <div id="Titulo">
+        <h1>CRM Motos</h1>
+    </div>
+
+    <section id="Calculador">
+
+        <div class="calculador-container">
+        
+            <!-- Input Contado -->
+            <div class="calculador-input">
+            <input id="precio-contado" type="number" placeholder="Precio">
+            </div>
+
+            <!-- Input Financiado   -->
+            <div class="calculador-input">
+                <input id="precio-financiado" type="number" placeholder="Precio">
+                </div>
+
+            <!-- Contado -->
+        
+            <div class="calculador-data" id="Contado">
+                <h2>Contado</h2>
+                <h3>Precio unidad: $0</h3>
+                <h3>Arancel: $0</h3>
+                <h3>DGR: $0</h3>
+                <h3>Casco: $50.000</h3>
+                <h3 class="total">Precio Final: $0</h3>
+            </div>
+            
+            <!-- Financiado -->
+            
+            <div class="calculador-data" id="Financiado">
+                <h2>Financiado</h2>
+                <h3>Precio unidad: $0</h3>
+                <h3>Arancel: $0</h3>
+                <h3>DGR: $0</h3>
+                <h3>Casco: $62.500</h3>
+                <h3 class="total">Precio Final: $0</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarjetas">
+
+        <div id="tarjetas-section-titulo">
+            <h2>Tarjeta de credito</h2>
+        </div>
+
+        <!-- Input valor a financiar -->
+        <div class="tarjeta-input-container">
+            <input id="tarjeta-input" type="number" placeholder="Precio a financiar">
+        </div>
+
+        <div class="tarjeta-operacion">
+            <input id="tarjeta-op-1" type="number" placeholder="valor">
+            <input id="tarjeta-op-2" type="number" placeholder="valor">
+            <h2 id="tarjeta-op-resultado">Resultado: $0</h2>
+        </div>
+
+        <!-- Naranja -->
+        
+        <div class="tarjetas-container">
+            <div class="tarjeta-container">
+                <table id="tarjeta-naranja-table">
+                    <thead>
+                        <h2>Tarjeta Naranja</h2>
+                        <tr>
+                            <th>Cantidad de cuotas</th>
+                            <th>Valor de cuota</th>
+                            <th>Limite disponible</th>
+                            <th>Interes</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tarjeta-naranja">
+                        <tr>
+                            <td>Zeta</td>
+                            <td id="n-z-cuota">$0</td>
+                            <td id="n-z-limite">$0</td>
+                            <td>9%</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td id="n-6-cuota">$0</td>
+                            <td id="n-6-limite">$0</td>
+                            <td>11%</td>
+                        </tr>
+
+                        <tr>
+                            <td>8</td>
+                            <td id="n-8-cuota">$0</td>
+                            <td id="n-8-limite">$0</td>
+                            <td>15%</td>
+                        </tr>
+
+                        <tr>
+                            <td>10</td>
+                            <td id="n-10-cuota">$0</td>
+                            <td id="n-10-limite">$0</td>
+                            <td>15%</td>
+                        </tr>
+
+                        <tr>
+                            <td>12</td>
+                            <td id="n-12-cuota">$0</td>
+                            <td id="n-12-limite">$0</td>
+                            <td>16%</td>
+                        </tr>
+
+                        <tr>
+                            <td>18</td>
+                            <td id="n-18-cuota">$0</td>
+                            <td id="n-18-limite">$0</td>
+                            <td>38%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table id="tarjeta-bancarizas-table">
+                    <thead>
+                        <h2>Tarjeta Bancarizada (Visa o Master)</h2>
+                        <tr>
+                            <th>Cantidad de cuotas</th>
+                            <th>Valor de cuota</th>
+                            <th>Limite disponible</th>
+                            <th>Interes</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tarjeta-bancarizas">
+                        <tr>
+                            <td>3</td>
+                            <td id="b-3-cuota">$0</td>
+                            <td id="b-3-limite">$0</td>
+                            <td>9,71%</td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td id="b-6-cuota">$0</td>
+                            <td id="b-6-limite">$0</td>
+                            <td>15.92%</td>
+                        </tr>
+
+                        <tr>
+                            <td>9</td>
+                            <td id="b-9-cuota">$0</td>
+                            <td id="b-9-limite">$0</td>
+                            <td>24,2%</td>
+                        </tr>
+
+                        <tr>
+                            <td>12</td>
+                            <td id="b-12-cuota">$0</td>
+                            <td id="b-12-limite">$0</td>
+                            <td>33,51%</td>
+                        </tr>
+
+                        <tr>
+                            <td>18</td>
+                            <td id="b-18-cuota">$0</td>
+                            <td id="b-18-limite">$0</td>
+                            <td>46,97%</td>
+                        </tr>
+
+                        <tr>
+                            <td>24</td>
+                            <td id="b-24-cuota">$0</td>
+                            <td id="b-24-limite">$0</td>
+                            <td>62,5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="notas">
+        <h2>Notas Rapidas</h2>
+        <textarea name="notas" id="notas" cols="30" rows="10"></textarea>
+    </section>
+            
+    <footer>
+        <p>&copy; Creado por F. Colantone. Desarrollado por A. Silva </p>
+    </footer>
+</body>
+</html>
