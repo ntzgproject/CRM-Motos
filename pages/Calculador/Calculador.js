@@ -99,22 +99,22 @@ tarjetaInput.addEventListener("change", (e) => {
     }
 });
 
-                // Calculadora Suma
+                // Calculadora Resta
 
-const inputSuma1 = document.getElementById("tarjeta-op-1");
-const inputSuma2 = document.getElementById("tarjeta-op-2");
+const inputResta1 = document.getElementById("tarjeta-op-1");
+const inputResta2 = document.getElementById("tarjeta-op-2");
 const tarjetaOpResultado = document.getElementById("tarjeta-op-resultado");
 
-const actualizarSuma = () => {
-    const num1 = Number(inputSuma1.value) || 0;
-    const num2 = Number(inputSuma2.value) || 0;
-    const resultado = num1 + num2;
+const actualizarResta = () => {
+    const num1 = Number(inputResta1.value) || 0;
+    const num2 = Number(inputResta2.value) || 0;
+    const resultado = num1 - num2;
 
     tarjetaOpResultado.textContent = `Resultado: $${formatoPesos.format(resultado)}`;
 };
 
-inputSuma1.addEventListener("input", actualizarSuma);
-inputSuma2.addEventListener("input", actualizarSuma);
+inputResta1.addEventListener("input", actualizarResta);
+inputResta2.addEventListener("input", actualizarResta);
 
 
 
